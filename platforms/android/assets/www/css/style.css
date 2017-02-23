@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+.item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image{
+    max-width: 130px;
+    height: 80px;
+    text-align: center;
+    left: 20px;
+}
+.col{
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+
+}
+.srcName{
+    margin-left: 7px;
+    font-family: sans-serif;
+}
+.item-thumbnail-left{
+    padding-left: 170px;
+}
+.tabs {
+    top: 0px;
+}
+a.tab-item:active {
+    background-color: yellow;
+}
