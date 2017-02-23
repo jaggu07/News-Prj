@@ -1,23 +1,23 @@
-<ion-view view-title="news">
+<ion-view>
   <ion-header-bar>
     <div class="bar bar-header">
-      <div>
+        <h3 class="header">NewsSources</h3>
         <a href="#/app/content">
-        <button class="button button-clear button-positive" ng-click="display()">next</button>
+        <button class="button button-outline button-calm ion-arrow-right-c" ng-click="display(); displaynews()">&nbsp;Next</button>
         </a>
-      </div>
     </div>
   </ion-header-bar>
   <ion-content ng-init="sourceList()">
-    <div class="list" ng-repeat="src in newsSources">
-      <label class="checkbox-balanced">
-        <ion-checkbox  ng-model="src.checked" ng-checked="checkItems()">
-          <a class="item item-thumbnail-left">  
+    <br>
+    <div class="list src" ng-repeat="src in newsSources">
+       <label class="checkbox-royal" >
+        <ion-checkbox  ng-model="src.checked"  ng-checked="checkItems()">
+          <div class="item item-avatar">  
           <img class="sourceImg" ng-src="{{src.urlsToLogos.small}}">
           <h3 class="srcName">{{src.name}}</h3>
-          </a>
+          </div>
         </ion-checkbox>
-      </label>
+        </label>
     </div>
   </ion-content>
 </ion-view>
