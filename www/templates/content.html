@@ -25,9 +25,9 @@
       <div ng-repeat="latestNews in latestNewslist" >
     <a class="item item-thumbnail-left" ng-click="openModal(latestNews)">
       <img class="text-wrap" ng-src="{{latestNews.urlToImage}}">
-      <h2 ng-bind="latestNews.title"></h2>
+      <h2 class="item-text-wrap" ng-bind="latestNews.title"></h2>
       <p class="description" ng-bind="latestNews.description"></p> 
-      <p class="time item-text-right" ng-bind="latestNews.publishedAt"></p> 
+      <p class="time item-text-right" align="right" ng-bind="latestNews.publishedAt"></p> 
       </a>
       </div>
     </div>
