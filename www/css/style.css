@@ -117,14 +117,20 @@ h2.ng-binding{
 p.description{
     color: #464245;
     font-size: 14px;
+    text-wrap: normal;
 }
 p.time{
         margin-left: 60px;
     margin-top: 15px;
     color: #4caf50;
     font-size: 12px;
+    margin-right: 10px;
+}
+.item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image{
+    top: 15px;
 }
 img.text-wrap{
+    top: 15px;
     border-radius: 22%;
 }
 p.newstitle

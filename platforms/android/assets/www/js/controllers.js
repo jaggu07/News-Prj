@@ -49,13 +49,64 @@ var localarrayname=[];
 })
   }
 })
-.controller('descCntrl',function($scope,$window,$stateParams,$http){
+.controller('descCntrl',function($scope,$window,$stateParams,$ionicModal,$http,$cordovaInAppBrowser,$cordovaSocialSharing){
+  
+  //description view
+    $ionicModal.fromTemplateUrl('templates/desc.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  
+  $scope.openModal = function(arg) {
+    $scope.src=arg;
+    $scope.modal.show();
+  };
+   //Content sharing
+  $scope.shareContent=function(newsImage, description){
+  $cordovaSocialSharing.share('NEWS:', 'subject',newsImage,description) // Share via native share sheet
+    .then(function(result) {
+      // Success!
+    }, function(err) {
+      // An error occured. Show a message to the user
+    });
+  }
+
+  //In App Browser Opening
+     var options = {
+    location: 'yes',
+    clearcache: 'no',
+    toolbar: 'no'
+  };
+   $scope.openBrowser=function(url){
+      $cordovaInAppBrowser.open(url, '_blank', options)
+      .then(function(event) {
+         success
+      })
+      .catch(function(event) {
+         error
+      });
+    }
+
+
+  var rows = document.getElementsByTagName('a');
+  function rowHighlight() {
+    var selectedRows = document.getElementsByClassName('selected');
+      for (var n = 0; n < selectedRows.length; n++) {
+      selectedRows[n].className = '';
+    }
+    this.className = 'selected'
+}
+for (var i = 0; i < rows.length; i++) {
+    rows[i].addEventListener('click', rowHighlight);
+}
   $scope.a=function(options)
   {
      $http.get("https://newsapi.org/v1/articles?source="+$scope.api+"&sortBy="+options+"&apiKey=850de99fe1d34a3ea6b92fb4e85c540b").then(function(latestNews){
     $scope.latestNewslist = latestNews.data.articles; 
   })
-  }
+  
+}
 })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
