@@ -27,34 +27,30 @@
 .tabs {
     top: 10px;
 }
-h3.header{
+h3.header,h3.header-item{
     margin-left: 20px;
     margin-top: 6px;
     color: white;
     max-width: 100%;
 }
-.bar.bar-stable .title{
+.bar.bar-stable .title,.button-icon.ion-android-share-alt{
     color: white;
     top: 3px;
 }
-.button.button-outline.button-calm
+/*.button.button-outline.button-calm
 {
     left: 65px;
     top: 6px;
     color: white;
     border-color: white;
-}
+}*/
 .button.button-icon.button-clear{
     color: white;
 }
-div.bar.bar-header,.bar-stable.bar.bar-header{
+div.bar.bar-header,.bar-stable.bar.bar-header,.color{
  background-color: #23212a;
  height: 55px;
  max-width: 100%;
-}
-
-.tab-item.activated{
-    background-color: yellow;
 }
 .checkbox input, i.checkbox-icon{
     left: 250px;  
@@ -88,7 +84,8 @@ div.bar.bar-header,.bar-stable.bar.bar-header{
     display: none;
 }
 .bg1{
-    background: #18171c;
+    background: white;
+    margin-top: 27px;
 }
 .item.item-checkbox{
     padding: 1px;
@@ -106,4 +103,43 @@ div.bar.bar-header,.bar-stable.bar.bar-header{
 }
 ion-item.item{
     top:20px;
+}
+ion-item.item{
+    top:20px;
+}
+h2.ng-binding{
+    color: orange;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 150px;
+}
+p.description{
+    color: #afa7ae;
+}
+p.time{
+        margin-left: 60px;
+    margin-top: 15px;
+    color: black;
+    font-size: 12px;
+}
+img.text-wrap{
+    border-radius: 22%;
+}
+p.newstitle
+{
+    font-size: x-large;
+}
+.newsimage
+{
+    width: 100%;
+    height: 75%;
+}
+
+.selected {
+    color:red;
+    font-weight: bolder;
+    font-size: 16px;
+}
+a{
+    color: #18171c;
 }
